@@ -14,4 +14,5 @@ let result2=mul(30)
 let a=2;
 
 let result=result1-result2+a;
-console.log(result);
+
+console.log(`the result is ${result}`);
