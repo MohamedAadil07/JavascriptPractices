@@ -1,4 +1,4 @@
-console.log('a2+b2+2ab');
+//x**3-3*x+2
 
 function cube(n1){
     let res1=n1**3;
