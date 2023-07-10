@@ -1,3 +1,5 @@
+//a**2+b**2+2ab
+
 function num1(n1) {
     let a = n1 * n1;
     return a;
