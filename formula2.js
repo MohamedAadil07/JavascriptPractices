@@ -1,3 +1,5 @@
+//2ab+(4/ab)+1
+
 function mathMul(n1,n2){
     let x = 2*n1*n2;
     return x;
