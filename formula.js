@@ -1,3 +1,4 @@
+console.log('a2+b2+2ab');
 
 function cube(n1){
     let res1=n1**3;
