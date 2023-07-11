@@ -1,93 +1,71 @@
 //UNIT CONVERSION
 
-var a = prompt('enter the value');
+let a = prompt("enter the value");
 
-let b= prompt('enter the unit of the value','mm or cm or dm or m');
+let b = prompt("enter the unit of the value");
 
-let c= prompt('enter the unit to be converted');
+let c = prompt("enter the conversion unit");
 
-a=+a;
-
-function mmtocm(n1){
-  if(b==='mm')
-  {
-     if(c==='cm')
-     {
-       let cm=n1/10;
-       return cm;
-     }
-  }
-  
-  if(b==='mm')
-  {
-    if(c==='dm')
-    {
-      let dm=n1/100;
-      return dm;
-    }
-  }
-  if(b==='mm'){
-    if(c==='m'){
-      let m=n1/1000;
-      return m;
-    }
-  }
-  if(b==='cm'){
-    if(c==='mm'){
-      let mm=n1*10;
-      return mm;
-    }
-  }
-  if(b==='cm'){
-    if(c==='dm'){
-      let dm=n1/10;
-      return dm;
-    }
-  }
-  if(b==='cm'){
-    if(c==='m'){
-      let m=n1/100;
-      return m;
-    }
-  }
-  if(b==='dm'){
-    if(c==='m'){
-      let m=n1/10;
-      return m
-    }
-  }
-  if(b==='dm'){
-    if(c==='cm'){
-      let cm=n1*10;
-      return cm
-    }
-  }
-  if(b==='dm'){
-    if(c==='mm'){
-      let mm=n1*100;
-      return mm
-    }
-  }
-  if(b==='m'){
-    if(c==='mm'){
-      let mm=n1*1000;
-      return mm;
-    }
-  }
-  if(b==='m'){
-    if(c==='cm'){
-      let cm=n1*100;
-      return cm;
-    }
-  }
-  if(b==='m'){
-    if(c==='dm'){
-      let dm=n1*10;
-      return dm;
-    }
+function mm_Others(n1) {
+  if (b === "mm" && c === "cm") {
+    let res1 = n1 / 10;
+    return res1;
+  } else if (b === "mm" && c === "dm") {
+    let res1 = n1 / 100;
+    return res1;
+  } else if (b === "mm" && c === "m") {
+    let res1 = n1 / 1000;
+    return res1;
   }
 }
 
-let result1 = mmtocm(a);
+let result1 = mm_Others(a);
+console.log(`the converted value is ${result1}`);
 
-console.log(`the covertion is ${result1}`);
+function cm_Others(n1) {
+  if (b === "cm" && c === "mm") {
+    let res2 = n1 * 10;
+    return res2;
+  } else if (b === "cm" && c === "dm") {
+    let res2 = n1 / 10;
+    return res2;
+  } else if (b === "cm" && c === "m") {
+    let res2 = n1 / 100;
+    return res2;
+  }
+}
+
+let result2 = cm_Others(a);
+console.log(`the converted value is ${result2}`);
+
+function dm_Others(n1) {
+  if (b === "dm" && c === "mm") {
+    let res3 = n1 * 100;
+    return res3;
+  } else if (b === "dm" && c === "cm") {
+    let res3 = n1 * 10;
+    return res3;
+  } else if (b === "dm" && c === "m") {
+    let res3 = n1 / 10;
+    return res3;
+  }
+}
+
+let result3 = dm_Others(a);
+console.log(`the converted value is ${result3}`);
+
+function m_Others(n1) {
+  if (b === "m" && c === "mm") {
+    let res4 = n1 * 1000;
+    return res4;
+  } else if (b === "m" && c === "cm") {
+    let res4 = n1 * 100;
+    return res4;
+  } else if (b === "m" && c === "dm") {
+    let res4 = n1 * 10;
+    return res4;
+  }
+}
+
+let result4 = m_Others(a);
+console.log(`the converted value is ${result4}`);
