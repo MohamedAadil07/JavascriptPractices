@@ -1,4 +1,4 @@
-//a3*b3*c2  -  a3+b2*c2
+//(a**3*b**3*c**2) - (a**3+b**2*c**2)
 
 let a=prompt('enter the First value');
 
