@@ -1,71 +1,78 @@
-//UNIT CONVERSION
 
-let a = prompt("enter the value");
+let entered_value=prompt('Enter the value');
 
-let b = prompt("enter the unit of the value");
+let input_unit=prompt('Enter the unit of the value');
 
-let c = prompt("enter the conversion unit");
+let output_unit=prompt('Enter the unit to be converted');
 
-function mm_Others(n1) {
-  if (b === "mm" && c === "cm") {
-    let res1 = n1 / 10;
-    return res1;
-  } else if (b === "mm" && c === "dm") {
-    let res1 = n1 / 100;
-    return res1;
-  } else if (b === "mm" && c === "m") {
-    let res1 = n1 / 1000;
-    return res1;
-  }
+function convert_mm_to_others(entered_value){
+  let result ;
+   if(output_unit==='cm'){
+     result=entered_value/10;
+   }
+   else if(output_unit==='dm'){
+     result=entered_value/100;
+   }
+   else if(output_unit==='m'){
+     result=entered_value/1000;
+   }
+   return result;
 }
 
-let result1 = mm_Others(a);
-console.log(`the converted value is ${result1}`);
-
-function cm_Others(n1) {
-  if (b === "cm" && c === "mm") {
-    let res2 = n1 * 10;
-    return res2;
-  } else if (b === "cm" && c === "dm") {
-    let res2 = n1 / 10;
-    return res2;
-  } else if (b === "cm" && c === "m") {
-    let res2 = n1 / 100;
-    return res2;
+function convert_cm_to_others(entered_value){
+  let result;
+  if(output_unit==='mm'){
+    result=entered_value*10;
   }
+  else if(output_unit==='dm'){
+    result=entered_value/10;
+  }
+  else if(output_unit==='m'){
+    result=entered_value/100;
+  }
+  return result;
 }
 
-let result2 = cm_Others(a);
-console.log(`the converted value is ${result2}`);
-
-function dm_Others(n1) {
-  if (b === "dm" && c === "mm") {
-    let res3 = n1 * 100;
-    return res3;
-  } else if (b === "dm" && c === "cm") {
-    let res3 = n1 * 10;
-    return res3;
-  } else if (b === "dm" && c === "m") {
-    let res3 = n1 / 10;
-    return res3;
+function convert_dm_to_others(entered_value){
+  let result;
+  if(output_unit==='mm'){
+    result=entered_value*100;
   }
+  else if(output_unit==='cm'){
+    result=entered_value*10;
+  }
+  else if(output_unit==='m'){
+    result=entered_value/10;
+  }
+  return result;
 }
 
-let result3 = dm_Others(a);
-console.log(`the converted value is ${result3}`);
-
-function m_Others(n1) {
-  if (b === "m" && c === "mm") {
-    let res4 = n1 * 1000;
-    return res4;
-  } else if (b === "m" && c === "cm") {
-    let res4 = n1 * 100;
-    return res4;
-  } else if (b === "m" && c === "dm") {
-    let res4 = n1 * 10;
-    return res4;
+function convert_m_to_others(entered_value){
+  let result;
+  if(output_unit==='mm'){
+    result=entered_value*1000;
   }
+  else if(output_unit==='cm'){
+    result=entered_value*100;
+  }
+  else if(output_unit==='dm'){
+    result=entered_value*10;
+  }
+  return result;
 }
 
-let result4 = m_Others(a);
-console.log(`the converted value is ${result4}`);
+if(input_unit==='mm'){
+  console.log(convert_mm_to_others(entered_value));
+}
+else if(input_unit==='cm') {
+  console.log(convert_cm_to_others(entered_value));
+}
+else if (input_unit==='dm'){
+  console.log(convert_dm_to_others(entered_value));
+}
+else if (input_unit==='m'){
+  console.log(convert_m_to_others(entered_value));
+}
+else{
+  console.log('Wrong Unit!');
+}
