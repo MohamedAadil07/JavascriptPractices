@@ -1,0 +1,37 @@
+//getting inputs and storing it in an object
+
+
+function getData() {
+  let firstInput = prompt("Enter value for a:");
+  let secondInput = prompt("Enter value for b:");
+
+  let inputData = {
+    A: parseInt(firstInput),
+    B: parseInt(secondInput)
+  }
+  
+  return inputData;
+}
+
+let result1 = getData();
+console.log(result1);
+
+
+
+//adding the props of object
+
+
+function addData(n1,n2){
+ let result = n1+n2;
+ return result;
+}
+
+let result2 = addData(result1.A,result1.B);
+
+
+
+function printResult(){
+  console.log(result2);
+}
+
+printResult();
