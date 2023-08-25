@@ -1,0 +1,50 @@
+let firstInput=prompt("Enter the 1st value");
+let secondInput=prompt("Enter the 2nd value");
+let thirdInput=prompt("add? or sub? or div?");
+
+function getData(){
+
+    let inputData={
+      key1 : parseInt(firstInput),
+      key2 : parseInt(secondInput),
+      
+    }
+    return inputData;
+  }
+
+  let result1 = getData()
+  console.log(result1);
+
+//Addition
+function addData(input1,input2){
+   return input1+input2;
+}
+let result2=addData(result1.key1,result1.key2);
+
+
+//Subtraction
+function subData(input1,input2){
+  return input1-input2;
+}
+let result3=subData(result1.key1,result1.key2);
+
+
+//Division
+function divData(input1,input2){
+  return input1/input2;
+}
+let result4=divData(result1.key1,result1.key2);
+
+function print(){
+
+    let printResult={
+      add : result2,
+      sub : result3,
+      div : result4
+   }
+  return printResult;
+}
+
+let finalResult = print();
+
+console.log(finalResult[thirdInput]);
